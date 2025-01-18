@@ -9,7 +9,7 @@ const Home = () => {
 
       <div className={styles.content}>
         <div className={styles.textContent}>
-          <h1>Mult-Side Technologies</h1>
+          <h1>MULT-SIDE Technologies</h1>
           <p>Keeping You Safe and Secure</p>
         </div>
 
