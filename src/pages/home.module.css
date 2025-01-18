@@ -1,23 +1,41 @@
-.banner{
+.banner {
     font-family: 'Arial, sans-serif';
     background: url('../Assets/background_image.jpg');
     color: white;
     min-height: 100vh;
     background-size: cover;
     position: relative;
-}
-
-.content{
-    max-width: 800px;  /* Increased max width */
-    padding: 15%;      /* Increased padding for more space inside */
-    margin: 0;         /* Remove auto margin to left-align */
+  }
+  
+  .content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center content */
+    justify-content: space-between; /* Add space between the text and image */
+    padding: 15%;
+    margin: 0;
     z-index: 9;
     position: relative;
     text-align: left;
-    font-size: 30px;  /* Optional, depending on content alignment */
-}
-
-.overlay{
+    font-size: 30px;
+  }
+  
+  .textContent {
+    max-width: 50%;
+    margin-left: -10%; /* Adjust the text width */
+  }
+  
+  .imageContainer {
+    max-width: 60%;
+    margin-left: 10%; /* Increase the container width to give more space for the image */
+  }
+  
+  .image {
+    width: 100%; /* Make the image take up 100% of its container width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners */
+  }
+  
+  .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -25,4 +43,5 @@
     top: 0;
     left: 0;
     opacity: 0.7;
-}
+  }
+  
