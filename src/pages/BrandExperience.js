@@ -1,17 +1,28 @@
 import React from 'react';
-import styles from './BrandExperience.module.css'; // Create a separate CSS file for styles
+import styles from './BrandExperience.module.css';
+
+// Import brand logos
+import lendplusLogo from '../Assets/lendpluss.png';
+import factsLogo from '../Assets/factsss.png';
+import hillViewResidentsLogo from '../Assets/hill_side.png';
+import victoriaBankLogo from '../Assets/victoria_bank.png';
+import interBuildLogo from '../Assets/interbuld-r.png';
+import xylemLogo from '../Assets/xylem-r.png';
+import risingFreightLogo from '../Assets/ruff-r.png';
+import brollKenyaLogo from '../Assets/broll_kenya-r.png';
+import blackwoodHodgeLogo from '../Assets/blackword-r.png';
 
 const BrandExperience = () => {
   const brands = [
-    { name: 'Lendplus', logo: '/path/to/bayer_logo.png' }, // Replace with actual logo paths
-    { name: 'Facts', logo: '/path/to/lilly_logo.png' },
-    { name: 'Hill view residents', logo: '/path/to/gsk_logo.png' },
-    { name: 'Victoria bank Limited', logo: '/path/to/pfizer_logo.png' },
-    { name: 'Inter build limited', logo: '/path/to/nhs_logo.png' },
-    { name: 'Xylem', logo: '/path/to/diageo_logo.png' },
-    { name: 'Rising Freight limited', logo: '/path/to/fanisi_logo.png' },
-    { name: 'Broll kenya Limited', logo: '/path/to/tarmac_logo.png' },
-    { name: 'Blackwood Hodge limited', logo: '/path/to/ballymore_logo.png' },
+    { name: 'Lendplus', logo: lendplusLogo },
+    { name: 'Facts', logo: factsLogo },
+    { name: 'Hill View Residents', logo: hillViewResidentsLogo },
+    { name: 'Victoria Bank Limited', logo: victoriaBankLogo },
+    { name: 'Inter Build Limited', logo: interBuildLogo },
+    { name: 'Xylem', logo: xylemLogo },
+    { name: 'Rising Freight Limited', logo: risingFreightLogo },
+    { name: 'Broll Kenya Limited', logo: brollKenyaLogo },
+    { name: 'Blackwood Hodge Limited', logo: blackwoodHodgeLogo },
   ];
 
   return (

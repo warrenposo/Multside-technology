@@ -1,14 +1,17 @@
 .container {
     width: 100%;
     margin: auto;
-    padding: 20px;
+    padding: 40px;
+    margin-top: 40px; /* Push content below the navbar */
     background: linear-gradient(to right, #fdf5e6, #f4a261);
+    border: none; /* Ensure no borders are applied to the container */
   }
   
   .title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
+    padding-bottom: 0; /* Ensure no padding adds extra space */
     color: #333;
   }
   
@@ -20,8 +23,8 @@
   }
   
   .card {
-    background: rgb(4, 64, 110); /* Default background is black */
-    color: white; /* Default text color is white */
+    background: rgb(4, 64, 110); /* Card background color */
+    color: white; /* Default text color */
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -30,6 +33,7 @@
     width: 100%;
     min-height: 350px; /* Ensure uniform card height */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: none; /* Ensure no border adds thickness */
   }
   
   .card:hover {
@@ -51,11 +55,18 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    padding-bottom: 0; /* Prevent extra space below the title */
     transition: color 0.3s ease;
   }
   
   .cardDescription {
     font-size: 16px;
+    padding: 0; /* Ensure no padding adds to the spacing */
     transition: color 0.3s ease;
+  }
+  
+  body {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
   }
   
