@@ -1,5 +1,4 @@
-import React from 'react'; 
-import { Link } from 'react-scroll';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,6 +6,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact';
+import BrandExperience from './pages/BrandExperience'; // Import the new component
 import './App.css'; // Import the CSS file
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
       </div>
       <div id="services" className="section">
         <Services />
+        <BrandExperience /> {/* Add the Brand Experience section here */}
       </div>
       <div id="reviews" className="section">
         <Reviews />

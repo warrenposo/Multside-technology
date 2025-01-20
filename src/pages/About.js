@@ -1,38 +1,34 @@
 import React from 'react';
+import styles from './about.module.css';
 
-const Home = () => {
+const About = () => {
   return (
-    <div
-      style={{
-        backgroundColor: '#3bcbd0', // Adjusted to match the blue-green gradient
-        background: 'linear-gradient(180deg, #3bcbd0, #1e8ca8)', // Gradient effect
-        color: 'white', // Ensure text is visible
-        minHeight: '100vh', // Full-screen height
-        padding: '20px',
-      }}
-    >
-      {/* <h1>Introducing HAWKR.</h1>
-      <p>Innovative vending machine technology.</p>
-      <ul>
-        <li>Real-time data delivery</li>
-        <li>Individual machine control</li>
-        <li>Advertisement syndication</li>
-        <li>Built for scale to fit 100,000s of machines</li>
-      </ul> */}
-      <button
-        style={{
-          backgroundColor: 'white',
-          color: '#3bcbd0',
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
-      >
-        Learn more
-      </button>
+    <div className={styles.aboutContainer}>
+      <div className={styles.content}>
+        <h1 className={styles.heading}>About Us</h1>
+        <p className={styles.paragraph}>
+          Multside Technologies, established in October 2016, is dedicated to
+          delivering comprehensive and integrated business solutions that prioritize
+          quality, security, and reliability. Our mission is to empower businesses
+          to innovate and grow through advanced computing and communication
+          technologies.
+        </p>
+        <p className={styles.paragraph}>
+          We are committed to organizational excellence by fostering a knowledgeable
+          and trusted workforce, strategically investing in skills, modern tools, and
+          cutting-edge technology to meet the evolving needs of our clients. Whether
+          supporting small businesses, medium enterprises, or large corporations, we
+          provide tailored solutions that address current challenges while preparing
+          for future opportunities.
+        </p>
+        <p className={styles.paragraph}>
+          Our collaborative approach combines diverse expertise to deliver comprehensive
+          answers, ensuring the highest levels of service and satisfaction for our clients
+          worldwide.
+        </p>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default About;

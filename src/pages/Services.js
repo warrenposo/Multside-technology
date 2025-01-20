@@ -1,38 +1,63 @@
 import React from 'react';
+import styles from './Service.module.css';
 
-const Home = () => {
+const Services = () => {
+  const services = [
+    {
+      title: 'Security',
+      description: 'High-tech security systems for homes and businesses.',
+      image: '/src/Assets/security_pic.jpg', // Replace with the actual path for the Security service image
+    },
+    {
+      title: 'Internet',
+      description: 'Fast and reliable internet installation and maintenance.',
+      image: '/src/Assets/internet_pic.jpg', // Replace with the actual path for the Internet service image
+    },
+    {
+      title: 'CCTV Installation',
+      description: 'Top-notch CCTV camera setups to ensure safety and monitoring.',
+      image: 'src/Assets/camera_pic.jpg', // Correct relative path for CCTV Installation
+    },
+    {
+      title: 'Fiber Installation',
+      description: 'Expert fiber optic cabling for high-speed connections.',
+      image: '/src/Assets/fiber_pic.jpg', // Replace with the actual path for Fiber Installation
+    },
+    {
+      title: 'Car tracker installation',
+      description: 'Reliable and modern construction services.',
+      image: '/src/Assets/construction_pic.jpg', // Replace with the actual path for Construction service image
+    },
+    {
+      title: 'Fire Detection installation',
+      description: 'Reliable and modern construction services.',
+      image: '/src/Assets/construction_pic.jpg', // Replace with the actual path for Construction service image
+    },
+    {
+      title: 'Vehicle tracking services',
+      description: 'Reliable and modern construction services.',
+      image: '/src/Assets/construction_pic.jpg', // Replace with the actual path for Construction service image
+    },
+  ];
+
   return (
-    <div
-      style={{
-        backgroundColor: '#3bcbd0', // Adjusted to match the blue-green gradient
-        background: 'linear-gradient(180deg, #3bcbd0, #1e8ca8)', // Gradient effect
-        color: 'white', // Ensure text is visible
-        minHeight: '100vh', // Full-screen height
-        padding: '20px',
-      }}
-    >
-      {/* <h1>Introducing HAWKR.</h1>
-      <p>Innovative vending machine technology.</p>
-      <ul>
-        <li>Real-time data delivery</li>
-        <li>Individual machine control</li>
-        <li>Advertisement syndication</li>
-        <li>Built for scale to fit 100,000s of machines</li>
-      </ul> */}
-      <button
-        style={{
-          backgroundColor: 'white',
-          color: '#3bcbd0',
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
-      >
-        Learn more
-      </button>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Our Services</h1>
+      <div className={styles.grid}>
+        {services.map((service, index) => (
+          <div key={index} className={styles.card}>
+            <img
+              src={service.image}
+              alt={service.title}
+              className={styles.cardImage}
+            />
+            <h2 className={styles.cardTitle}>{service.title}</h2>
+            <p className={styles.cardDescription}>{service.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Services;

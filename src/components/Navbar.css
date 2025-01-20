@@ -1,78 +1,89 @@
-/* Navbar.css */
+/* Navbar Styles */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity for translucent effect */
-    padding: 10px 20px;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    backdrop-filter: blur(5px); /* Apply blur effect to the background */
-    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
-  }
-  
-  .navbar-logo {
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .navbar-links li {
-    display: inline;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
-    position: relative; /* Required for ::after pseudo-element */
-    transition: color 0.3s; /* Smooth color transition */
-  }
-  
-  .nav-link:hover {
-    color: #80cbc4; /* Lighter green on hover */
-  }
-  
-  /* Add the white line animation */
-  .nav-link::after {
-    content: ''; /* Empty content for the pseudo-element */
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -5px; /* Position the line just below the text */
-    height: 2px; /* Thickness of the line */
-    background-color: white; /* Line color */
-    transform: scaleX(0); /* Start with no width */
-    transform-origin: left; /* Line grows from the left */
-    transition: transform 0.3s ease-in-out; /* Smooth grow animation */
-  }
-  
-  .nav-link:hover::after {
-    transform: scaleX(1); /* Full width on hover */
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity for translucent effect */
+  padding: 10px 20px;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 90px; /* Fixed height for consistency */
+  backdrop-filter: blur(5px); /* Apply blur effect to the background */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
+}
+
+.navbar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.navbar-links li {
+  display: inline;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  position: relative; /* Required for ::after pseudo-element */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-link:hover {
+  color: #80cbc4; /* Lighter green on hover */
+}
+
+/* Add the white line animation */
+.nav-link::after {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5px; /* Position the line just below the text */
+  height: 2px; /* Thickness of the line */
+  background-color: white; /* Line color */
+  transform: scaleX(0); /* Start with no width */
+  transform-origin: left; /* Line grows from the left */
+  transition: transform 0.3s ease-in-out; /* Smooth grow animation */
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1); /* Full width on hover */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
       flex-direction: column;
       align-items: flex-start;
-    }
-  
-    .navbar-links {
+  }
+
+  .navbar-links {
       flex-direction: column;
       gap: 10px;
-    }
   }
-  
+}
+
+/* Prevent Content Overlap */
+body {
+  margin: 0;
+  padding-top: 60px; /* Same height as the navbar */
+}
+
+/* Alternatively, for specific pages or sections */
+.content {
+  padding-top: 60px; /* Same height as the navbar */
+}
