@@ -22,19 +22,19 @@ const NextArrow = ({ onClick }) => (
 const Review = () => {
   const reviews = [
     {
-      text: "“I’ve had the pleasure of working with the team at Mult-side on a variety of different projects over the past year. They always develop creative, cost-effective, practical solutions to meet our needs and deliver those solutions with a high level of professionalism and responsiveness. The team are very customer-focused and efficient and it’s a pleasure to work with them.”",
+      text: "Multiside did a very nice job on Camera, Solar and Biometic installation at Ecofrend Cleaning Solution premises. ”",
       stars: 5,
-      author: "Hill view Residents Association",
+      author: "Wilson mwangi",
     },
     {
-      text: "“The professionalism and expertise demonstrated by this company have been outstanding. They take the time to understand our needs and consistently deliver solutions that exceed our expectations. A truly valuable partner!”",
+      text: "“Excellent Customer Services in Installation & maintenance of Security Systems,Access Control,CCTV Surveillance & Telecom Systems”",
       stars: 5,
-      author: "Facts Africa Limited",
+      author: "David Onyango",
     },
     {
-      text: "“Their innovative approach and attention to detail are remarkable. They ensured our project was completed on time and to the highest standard. Highly recommend their services for any business needs.”",
+      text: "“Your customer support is the best I have experienced. Thanks for quality services. All your efforts are greatly appreciated on our end.”",
       stars: 5,
-      author: "Victoria Commercial Bank",
+      author: "Godfrey Ochieng",
     },
   ];
 
