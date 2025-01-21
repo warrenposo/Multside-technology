@@ -1,38 +1,60 @@
 import React from 'react';
+import styles from './Contact.module.css';
 
-const Home = () => {
+const Contactus = () => {
   return (
-    <div
-      style={{
-        backgroundColor: '#3bcbd0', // Adjusted to match the blue-green gradient
-        background: 'linear-gradient(180deg,rgb(119, 208, 59),rgb(117, 168, 30))', // Gradient effect
-        color: 'white', // Ensure text is visible
-        minHeight: '100vh', // Full-screen height
-        padding: '20px',
-      }}
-    >
-      {/* <h1>Introducing HAWKR.</h1>
-      <p>Innovative vending machine technology.</p>
-      <ul>
-        <li>Real-time data delivery</li>
-        <li>Individual machine control</li>
-        <li>Advertisement syndication</li>
-        <li>Built for scale to fit 100,000s of machines</li>
-      </ul> */}
-      <button
-        style={{
-          backgroundColor: 'white',
-          color: '#3bcbd0',
-          padding: '10px 20px',
-          border: 'none',
-          borderRadius: '5px',
-          cursor: 'pointer',
-        }}
-      >
-        Learn more
-      </button>
+    <div className={styles.container}>
+      <div className={styles.contactDetails}>
+        <h2>Contact Information</h2>
+        <div className={styles.infoItem}>
+          <span className={styles.icon}>📞</span>
+          <div>
+            <h4>Phone</h4>
+            <p>+254727676338</p>
+          </div>
+        </div>
+        <div className={styles.infoItem}>
+          <span className={styles.icon}>📧</span>
+          <div>
+            <h4>Email Us</h4>
+            <p>multsidetechnologies@gmail.com</p>
+          </div>
+        </div>
+        <div className={styles.infoItem}>
+          <span className={styles.icon}>📍</span>
+          <div>
+            <h4>Address</h4>
+            <p>K-mall, Kiambu Rd</p>
+          </div>
+        </div>
+      </div>
+
+      <div className={styles.contactForm}>
+        <h2>Send Us a Message</h2>
+        <form>
+          <div className={styles.inputGroup}>
+            <label htmlFor="name">Name *</label>
+            <input type="text" id="name" placeholder="Full name" required />
+          </div>
+          <div className={styles.inputGroup}>
+            <label htmlFor="email">Email *</label>
+            <input type="email" id="email" placeholder="Email address" required />
+          </div>
+          <div className={styles.inputGroup}>
+            <label htmlFor="phone">Phone Number *</label>
+            <input type="tel" id="phone" placeholder="Phone Number" required />
+          </div>
+          <div className={styles.inputGroup}>
+            <label htmlFor="message">Message *</label>
+            <textarea id="message" placeholder="Your message here.." rows="4" required></textarea>
+          </div>
+          <button type="submit" className={styles.submitButton}>
+            Submit Now
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default Contactus;
