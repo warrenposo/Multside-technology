@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     margin: auto;
-    padding: 80px;
+    padding: 100px;
     /* Push content below the navbar */
     background: linear-gradient(to right, #fdf5e6, #f4a261);
     border: none; /* Ensure no borders are applied to the container */

@@ -1,89 +1,116 @@
-/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.7); /* White with 70% opacity for translucent effect */
-  padding: 10px 20px;
+  background-color: rgba(108, 106, 106, 0.7); /* Translucent background */
+  padding: 5px 10px;
   color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   position: fixed;
   width: 100%;
   top: 0;
-  left: 0;
   z-index: 1000;
-  height: 90px; /* Fixed height for consistency */
-  backdrop-filter: blur(5px); /* Apply blur effect to the background */
-  transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
 }
 
 .navbar-logo {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'Arial', sans-serif;
 }
 
 .navbar-links {
-  list-style: none;
   display: flex;
   gap: 15px;
+  list-style: none;
 }
 
 .navbar-links li {
-  display: inline;
+  margin: 0 10px;
 }
 
-.nav-link {
+.navbar-links a {
   text-decoration: none;
   color: white;
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  position: relative; /* Required for ::after pseudo-element */
-  transition: color 0.3s; /* Smooth color transition */
+  font-size: 1rem;
+  position: relative; /* Position relative for the animation */
+  transition: color 0.3s;
 }
 
-.nav-link:hover {
-  color: #80cbc4; /* Lighter green on hover */
+.navbar-links a:hover {
+  color: #7bf312; /* Green hover color */
 }
 
-/* Add the white line animation */
-.nav-link::after {
-  content: ''; /* Empty content for the pseudo-element */
+/* White Line Animation */
+.navbar-links a::after {
+  content: '';
   position: absolute;
   left: 0;
-  right: 0;
   bottom: -5px; /* Position the line just below the text */
-  height: 2px; /* Thickness of the line */
-  background-color: white; /* Line color */
-  transform: scaleX(0); /* Start with no width */
-  transform-origin: left; /* Line grows from the left */
-  transition: transform 0.3s ease-in-out; /* Smooth grow animation */
+  height: 2px;
+  width: 100%;
+  background: white; /* White line */
+  transform: scaleX(0); /* Initially hidden */
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
 }
 
-.nav-link:hover::after {
+.navbar-links a:hover::after {
   transform: scaleX(1); /* Full width on hover */
 }
 
-/* Mobile Responsiveness */
+/* Hamburger Menu for Mobile Screens */
 @media (max-width: 768px) {
-  .navbar {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-
   .navbar-links {
-      flex-direction: column;
-      gap: 10px;
+    display: none; /* Hide desktop links */
   }
-}
 
-/* Prevent Content Overlap */
-body {
-  margin: 0;
-  padding-top: 60px; /* Same height as the navbar */
-}
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+  }
 
-/* Alternatively, for specific pages or sections */
-.content {
-  padding-top: 60px; /* Same height as the navbar */
+  .mobile-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(108, 106, 106, 0.9);
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
+
+  .mobile-menu.open {
+    display: flex; /* Show when menu is open */
+  }
+
+  .mobile-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .mobile-menu a:hover {
+    color: #7bf312;
+  }
+
+  /* White Line Animation for Mobile Links */
+  .mobile-menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the line below text */
+    height: 2px;
+    width: 100%;
+    background: white; /* White line */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .mobile-menu a:hover::after {
+    transform: scaleX(1); /* Full width on hover */
+  }
 }
