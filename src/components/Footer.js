@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
+import logo from '../Assets/logo a.png'; // Import the logo image
 
 function Footer() {
   return (
@@ -7,11 +8,8 @@ function Footer() {
       <div className={styles.container}>
         {/* Left Section */}
         <div className={styles.logoSection}>
-          <h2 className={styles.logo}>MULT-SIDE</h2>
-          <p>Technologies</p>
-          <p>
-            Keeping you safe and secure
-          </p>
+          <img src={logo} alt="MULT-SIDE Logo" className={styles.logo} /> {/* Replaced with logo */}
+          <p>Keeping you safe and secure</p>
           <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact Us</a></li>
