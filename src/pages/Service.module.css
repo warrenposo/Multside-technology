@@ -1,72 +1,143 @@
+/* Container for the Service page */
 .container {
-    width: 100%;
-    margin: auto;
-    padding: 100px;
-    /* Push content below the navbar */
-    background: linear-gradient(to right, #fdf5e6, #f4a261);
-    border: none; /* Ensure no borders are applied to the container */
-  }
-  
+  width: 100%;
+  margin: auto;
+  padding: 100px;
+  background: linear-gradient(to right, #fdf5e6, #f4a261);
+  border: none; /* Ensure no borders are applied to the container */
+}
+
+/* Title Styling */
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 30px;
+  padding-bottom: 0;
+  color: #333;
+}
+
+/* Grid Layout for Service Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for cards */
+  gap: 20px;
+  padding: 10px;
+}
+
+/* Individual Card Styling */
+.card {
+  background: rgb(4, 64, 110); /* Card background color */
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  min-height: 350px; /* Ensure uniform card height */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.card:hover {
+  background: white;
+  color: black;
+  transform: scale(1.05); /* Hover animation */
+}
+
+/* Card Image Styling */
+.cardImage {
+  width: 100%;
+  height: 150px;
+  object-fit: contain; /* Ensure the whole image fits inside */
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+/* Card Title Styling */
+.cardTitle {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  transition: color 0.3s ease;
+}
+
+/* Card Description Styling */
+.cardDescription {
+  font-size: 16px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+/* General Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens like tablets or large phones */
+@media (max-width: 768px) {
   .title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 30px;
-    padding-bottom: 0; /* Ensure no padding adds extra space */
-    color: #333;
+    font-size: 28px; /* Adjust title size for smaller screens */
+    margin-bottom: 20px;
   }
-  
+
   .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid for cards */
-    gap: 20px;
-    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller grid for mobile */
+    gap: 15px; /* Less space between cards */
   }
-  
+
   .card {
-    background: rgb(4, 64, 110); /* Card background color */
-    color: white; /* Default text color */
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    min-height: 350px; /* Ensure uniform card height */
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-    border: none; /* Ensure no border adds thickness */
+    min-height: 300px; /* Adjust card height for smaller screens */
+    padding: 15px; /* Less padding for smaller screens */
   }
-  
-  .card:hover {
-    background: white; /* On hover, background turns white */
-    color: black; /* Text color changes to black */
-    transform: scale(1.05); /* Hover animation for emphasis */
-  }
-  
-  .cardImage {
-    width: 100%; /* Full width of the card */
-    height: 150px; /* Fixed height for consistency */
-    object-fit: contain; /* Ensures the entire image is visible */
-    border-radius: 10px; /* Rounded corners */
-    margin-bottom: 15px; /* Space between the image and text */
-    background-color: white; /* Adds a clean background for images */
-  }
-  
+
   .cardTitle {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    padding-bottom: 0; /* Prevent extra space below the title */
-    transition: color 0.3s ease;
+    font-size: 18px; /* Smaller card title */
   }
-  
+
   .cardDescription {
-    font-size: 16px;
-    padding: 0; /* Ensure no padding adds to the spacing */
-    transition: color 0.3s ease;
+    font-size: 14px; /* Adjust font size for description */
   }
-  
-  body {
-    margin: 0; /* Remove any default margin */
-    padding: 0; /* Remove any default padding */
+
+  .cardImage {
+    height: 120px; /* Reduce image height on smaller screens */
   }
-  
+}
+
+/* For very small screens like mobile phones */
+@media (max-width: 480px) {
+  .container {
+    padding: 50px 20px; /* Reduced padding for smaller screens */
+  }
+
+  .title {
+    font-size: 24px; /* Adjust title size further */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+    gap: 10px;
+  }
+
+  .card {
+    min-height: 280px; /* Smaller card height for mobile */
+    padding: 10px; /* Reduce padding on mobile */
+  }
+
+  .cardTitle {
+    font-size: 16px; /* Even smaller title on mobile */
+  }
+
+  .cardDescription {
+    font-size: 12px; /* Smaller description text */
+  }
+
+  .cardImage {
+    height: 100px; /* Even smaller image on mobile */
+  }
+}
