@@ -1,3 +1,4 @@
+/* Navbar container */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -11,13 +12,15 @@
   z-index: 1000;
 }
 
+/* Logo Section */
 .navbar-logo {
   font-size: 1.5rem;
   font-weight: bold;
 }
 
+/* Desktop Links */
 .navbar-links {
-  display: flex;
+  display: flex; /* Show links normally on desktop */
   gap: 15px;
   list-style: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -31,7 +34,7 @@
   text-decoration: none;
   color: white;
   font-size: 1rem;
-  position: relative; /* Position relative for the animation */
+  position: relative; /* For hover effect */
   transition: color 0.3s;
 }
 
@@ -43,10 +46,10 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px; /* Position the line just below the text */
+  bottom: -5px;
   height: 2px;
   width: 100%;
-  background: white; /* White line */
+  background: white;
   transform: scaleX(0); /* Initially hidden */
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
@@ -65,42 +68,49 @@
   z-index: 1100; /* Ensure hamburger is above other elements */
 }
 
+/* Mobile Menu */
 @media (max-width: 768px) {
-  .hamburger {
-    display: block; /* Show hamburger menu */
-  }
-
+  /* Mobile navbar links - hidden by default */
   .navbar-links {
-    display: none; /* Initially hide menu items */
+    display: none; /* Hide links on mobile by default */
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 60px; /* Adjust the top position based on navbar height */
     left: 0;
     width: 100%;
     background: rgba(108, 106, 106, 0.9);
     gap: 10px;
     padding: 20px;
-    transform: translateY(-100%); /* Hide the menu off-screen */
+    transform: translateY(-100%); /* Initially off-screen */
     opacity: 0;
     transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
+  /* Show the links when mobile menu is open */
   .navbar-links.open {
-    display: flex; /* Show links when menu is open */
-    transform: translateY(0); /* Slide down into view */
+    display: flex; /* Display the links */
+    transform: translateY(0); /* Slide into view */
     opacity: 1; /* Fully visible */
   }
 
+  /* Show hamburger menu on small screens */
+  .hamburger {
+    display: block; /* Show the hamburger on mobile screens */
+  }
+
+  /* Mobile link styling */
   .navbar-links a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
   }
 
+  /* Hover effect for mobile links */
   .navbar-links a:hover {
     color: #7bf312;
   }
 
+  /* Hover effect for mobile links */
   .navbar-links a::after {
     content: '';
     position: absolute;
@@ -114,6 +124,7 @@
     transition: transform 0.3s ease-in-out;
   }
 
+  /* Hover effect on mobile */
   .navbar-links a:hover::after {
     transform: scaleX(1); /* Full width on hover */
   }

@@ -25,7 +25,7 @@ function Navbar() {
         ☰
       </div>
 
-      {/* Desktop Links */}
+      
       <ul className="navbar-links">
         <li>
           <Link to="home" smooth={true} duration={500} className="nav-link">Home</Link>
