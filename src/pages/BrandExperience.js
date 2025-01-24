@@ -25,20 +25,21 @@ const BrandExperience = () => {
     { name: 'Blackwood Hodge Limited', logo: blackwoodHodgeLogo },
   ];
 
+  // Duplicate the brand array to create an infinite scrolling effect
+  const scrollingBrands = [...brands, ...brands];
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>Our Brand Experience</h2>
       <div className={styles.divider}></div>
-      <div className={styles.grid}>
-        {brands.map((brand, index) => (
-          <div key={index} className={styles.card}>
-            <img
-              src={brand.logo}
-              alt={brand.name}
-              className={styles.logo}
-            />
-          </div>
-        ))}
+      <div className={styles.slider}>
+        <div className={styles.sliderTrack}>
+          {scrollingBrands.map((brand, index) => (
+            <div key={index} className={styles.card}>
+              <img src={brand.logo} alt={brand.name} className={styles.logo} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

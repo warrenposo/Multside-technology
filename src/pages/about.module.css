@@ -1,6 +1,6 @@
 .aboutContainer {
   background-color: #170271; /* Base purple color */
-  background: linear-gradient(180deg, #260171, #2d0066); /* Gradient effect */
+  background: linear-gradient(180deg, #4311a7, #1b63a2); /* Gradient effect */
   color: white;
   min-height: 100vh; /* Full-screen height */
   display: flex;
