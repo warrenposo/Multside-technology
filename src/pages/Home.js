@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './home.module.css';
-import homepageImage from '../Assets/homepagepic-removebg.png';  // Import the image
+import homepageImage from '../Assets/homepagepic-removebg.png'; // Import the image
 
 const Home = () => {
   return (
@@ -9,14 +9,14 @@ const Home = () => {
 
       <div className={styles.content}>
         <div className={styles.textContent}>
-          <h1>MULT-SIDE Technologies</h1>
+          <h1 className={styles.gradientText}>MULT-SIDE Technologies</h1>
           <p>Keeping You Safe and Secure</p>
         </div>
 
         <div className={styles.imageContainer}>
-          <img 
-            src={homepageImage}  // Use the imported image
-            alt="Technology"      // Always add an alt text for accessibility
+          <img
+            src={homepageImage} // Use the imported image
+            alt="Technology" // Always add an alt text for accessibility
             className={styles.image}
           />
         </div>

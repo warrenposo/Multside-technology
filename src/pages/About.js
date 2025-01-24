@@ -1,10 +1,28 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import styles from './about.module.css';
 
 const About = () => {
+  const waveRevealVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1.5,
+        ease: [0.17, 0.67, 0.83, 0.67], // Ease-in-out curve
+      },
+    },
+  };
+
   return (
     <div className={styles.aboutContainer}>
-      <div className={styles.content}>
+      <motion.div
+        className={styles.content}
+        initial="hidden"
+        animate="visible"
+        variants={waveRevealVariants}
+      >
         <h1 className={styles.heading}>About Us</h1>
         <p className={styles.paragraph}>
           Multside Technologies, established in October 2016, is dedicated to
@@ -26,7 +44,7 @@ const About = () => {
           answers, ensuring the highest levels of service and satisfaction for our clients
           worldwide.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
