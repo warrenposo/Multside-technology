@@ -1,69 +1,111 @@
 .aboutContainer {
-    background-color: #170271; /* Base purple color */
-    background: linear-gradient(180deg, #260171, #2d0066); /* Gradient effect */
-    color: white;
-    min-height: 100vh; /* Full-screen height */
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    text-align: center;
-    padding: 80px;
-    box-sizing: border-box;
+  background-color: #170271; /* Base purple color */
+  background: linear-gradient(180deg, #260171, #2d0066); /* Gradient effect */
+  color: white;
+  min-height: 100vh; /* Full-screen height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  text-align: center;
+  padding: 80px;
+  box-sizing: border-box;
+  overflow: hidden; /* Prevent scrollbars during animation */
+}
+
+.content {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center content */
+  justify-content: space-between; /* Add space between the text and image */
+  flex-direction: column; /* Stack items vertically for smaller screens */
+  max-width: 800px; /* Limit content width */
+  padding: 40px; /* Adjust padding for the content */
+  margin: 0;
+  z-index: 9;
+  position: relative;
+  text-align: left;
+
+  /* Animation */
+  animation: slideInFromLeft 1.5s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+.heading {
+  font-size: 2.5rem; /* Heading font size */
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff; /* Ensure good contrast */
+  text-align: center;
+
+  /* Add optional fade-in for heading */
+  animation: fadeIn 1s ease-out 1s forwards;
+  opacity: 0; /* Start invisible */
+}
+
+.paragraph {
+  font-size: 1.2rem; /* Paragraph font size */
+  line-height: 1.8; /* Increase line height for readability */
+  margin-bottom: 20px; /* Space between paragraphs */
+  color: #dcdcdc; /* Lighter font color for better readability */
+  text-align: justify; /* Justify text for clean alignment */
+
+  /* Add a slight delay to animate each paragraph */
+  animation: slideInFromLeft 1.5s ease-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+.paragraph:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.paragraph:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Slide-in animation */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%); /* Start off-screen */
+    opacity: 0; /* Start invisible */
   }
-  
+  100% {
+    transform: translateX(0); /* Slide to original position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Fade-in animation for heading */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .content {
-    display: flex; /* Use flexbox for layout */
-    align-items: center; /* Vertically center content */
-    justify-content: space-between; /* Add space between the text and image */
-    flex-direction: column; /* Stack items vertically for smaller screens */
-    max-width: 800px; /* Limit content width */
-    padding: 40px; /* Adjust padding for the content */
-    margin: 0;
-    z-index: 9;
-    position: relative;
-    text-align: left;
+    padding: 20px;
+    text-align: center; /* Center-align content on smaller screens */
   }
-  
+
   .heading {
-    font-size: 2.5rem; /* Heading font size */
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #fff; /* Ensure good contrast */
-    text-align: center;
+    font-size: 2rem; /* Reduce heading size on smaller screens */
   }
-  
+
   .paragraph {
-    font-size: 1.2rem; /* Paragraph font size */
-    line-height: 1.8; /* Increase line height for readability */
-    margin-bottom: 20px; /* Space between paragraphs */
-    color: #dcdcdc; /* Lighter font color for better readability */
-    text-align: justify; /* Justify text for clean alignment */
+    font-size: 1rem; /* Adjust paragraph size for better readability */
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .content {
-      padding: 20px;
-      text-align: center; /* Center-align content on smaller screens */
-    }
-  
-    .heading {
-      font-size: 2rem; /* Reduce heading size on smaller screens */
-    }
-  
-    .paragraph {
-      font-size: 1rem; /* Adjust paragraph size for better readability */
-    }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 1.8rem; /* Further reduce heading size on very small screens */
   }
-  
-  @media (max-width: 480px) {
-    .heading {
-      font-size: 1.8rem; /* Further reduce heading size on very small screens */
-    }
-  
-    .paragraph {
-      font-size: 0.9rem; /* Adjust paragraph font size */
-      line-height: 1.6;
-    }
+
+  .paragraph {
+    font-size: 0.9rem; /* Adjust paragraph font size */
+    line-height: 1.6;
   }
-  
+}
