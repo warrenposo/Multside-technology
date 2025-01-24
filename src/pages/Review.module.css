@@ -1,85 +1,117 @@
 .container {
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 110px 20px;
-    text-align: center;
-    background-image: url('../Assets/review background.jpg'); /* Use your relative path */
-    background-size: cover; /* Ensure the background covers the entire container */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    color: white; 
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
 
-     
-  }
-  
-  .title {
-    font-size: 32px;
-    font-weight: bold;
-    color: white; /* Text should contrast well with the background */
-    margin-bottom: 40px;
-  }
-  
-  .slider {
-    position: relative;
-  }
-  
-  .reviewCard {
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for readability */
-    color: white;
-    padding: 20px 30px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .reviewText {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  .stars {
-    margin: 10px 0;
-  }
-  
-  .star {
-    color: #f5a623; /* Gold star color */
-    font-size: 24px;
-    margin: 0 2px;
-  }
-  
-  .author {
-    font-size: 16px;
-    color: #d3d3d3; /* Lighter text for the author's name */
-    margin-top: 10px;
-  }
-  
-  /* Arrows */
-  .arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .prevArrow {
-    left: -10px; /* Adjust distance from the left */
-  }
-  
-  .nextArrow {
-    right: -10px; /* Adjust distance from the right */
-  }
-  
-  .arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
+.title {
+  font-size: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #212529;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 30px;
+}
+
+.slider {
+  position: relative;
+}
+
+.reviewCard {
+  /* Background and border */
+  background: linear-gradient(135deg, #07488a, #87cefa); /* Blue gradient */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px; /* Adjust the width of each review card */
+  margin: 0 auto; /* Center the card */
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Glowing border */
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 15px rgba(30, 144, 255, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reviewCard::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(30, 144, 255, 0.8), rgba(135, 206, 250, 0.8));
+  z-index: -1;
+  filter: blur(15px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reviewCard:hover::before {
+  opacity: 1;
+}
+
+.reviewCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 0 20px rgba(30, 144, 255, 0.6);
+}
+
+.reviewText {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 15px 0;
+  color: #ffffff; /* Text contrast */
+  text-align: center;
+}
+
+.stars {
+  margin-bottom: 10px;
+}
+
+.star {
+  color: #ffc107; /* Gold star color */
+  font-size: 18px;
+  margin: 0 1px;
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.authorImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.author {
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff; /* Author text color */
+}
+
+.slick-dots li button:before {
+  font-size: 10px; /* Smaller dot size */
+  color: #6c757d;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #212529;
+}
