@@ -105,5 +105,12 @@
     .contactForm {
       max-width: 100%;
     }
+    .mapContainer {
+      margin-top: 20px;
+      border: 1px solid #ddd; /* Optional: Add border for a clean look */
+      border-radius: 8px;
+      overflow: hidden; /* To prevent overflow outside the border */
+    }
+    
   }
   
