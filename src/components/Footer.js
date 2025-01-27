@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import logo from '../Assets/logo a.png'; // Import the logo image
+import facebookIcon from '../Assets/Facebook.png'; // Import Facebook icon
+import tiktokIcon from '../Assets/Tiktok.png'; // Import TikTok icon
+import instagramIcon from '../Assets/Linkedin2.png'; // Import Instagram icon
 
 function Footer() {
   return (
@@ -8,7 +11,7 @@ function Footer() {
       <div className={styles.container}>
         {/* Left Section */}
         <div className={styles.logoSection}>
-          <img src={logo} alt="MULT-SIDE Logo" className={styles.logo} /> {/* Replaced with logo */}
+          <img src={logo} alt="MULT-SIDE Logo" className={styles.logo} />
           <p>Keeping you safe and secure</p>
           <ul>
             <li><a href="#about">About Us</a></li>
@@ -42,9 +45,30 @@ function Footer() {
       <div className={styles.socialSection}>
         <h3>Follow Us</h3>
         <div className={styles.socialIcons}>
-          <a href="#instagram" className={styles.icon}>📷</a>
-          <a href="#tiktok" className={styles.icon}>🎵</a>
-          <a href="#linkedin" className={styles.icon}>🔗</a>
+          <a
+            href="https://www.facebook.com/profile.php?id=100063642215604&rdid=9y94MqA0q9rDqZ3n&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19uAMXoLeh%2F#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.icon}
+          >
+            <img src={facebookIcon} alt="Facebook" className={styles.socialImage} />
+          </a>
+          <a
+            href="https://www.tiktok.com/search?q=multi%20side%20technologies&t=1737968678917"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.icon}
+          >
+            <img src={tiktokIcon} alt="TikTok" className={styles.socialImage} />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/multside-technologies/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.icon}
+          >
+            <img src={instagramIcon} alt="Instagram" className={styles.socialImage} />
+          </a>
         </div>
       </div>
 

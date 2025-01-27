@@ -16,7 +16,7 @@ const Review = () => {
     {
       text: "“Excellent Customer Services in Installation & Maintenance of Security Systems, Access Control, CCTV Surveillance & Telecom Systems.”",
       stars: 5,
-      author: "David Onyango",
+      author: "Kevin Otieno",
       
     },
     {
