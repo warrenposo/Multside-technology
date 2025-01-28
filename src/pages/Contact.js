@@ -83,18 +83,22 @@ const Contactus = () => {
             <p>K-mall, Kiambu Rd</p>
           </div>
         </div>
-        {/* Add iframe map below the address */}
+        {/* Add updated iframe map below the address */}
         <div className={styles.mapContainer}>
-          <iframe
-            width="100%"
-            height="300"
-            frameBorder="0"
-            scrolling="no"
-            marginHeight="0"
-            marginWidth="0"
-            src="https://maps.google.com/maps?width=100%25&amp;height=300&amp;hl=en&amp;q=kiambu%20rd+(Multside)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            title="location-map"
-          ></iframe>
+          <div style={{ width: '100%' }}>
+            <iframe
+              width="100%"
+              height="600"
+              frameBorder="0"
+              scrolling="no"
+              marginHeight="0"
+              marginWidth="0"
+              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=K-mall,%20kiambu%20road+(Multside)&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              title="location-map"
+            >
+              <a href="https://www.gps.ie/">gps map</a>
+            </iframe>
+          </div>
         </div>
       </div>
 
