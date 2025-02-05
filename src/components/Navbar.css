@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(108, 106, 106, 0.7); /* Translucent background */
+  background-color: rgba(108, 106, 106, 0.077); /* Translucent background */
   padding: 5px 10px;
   color: white;
   position: fixed;
