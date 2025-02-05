@@ -35,7 +35,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgba(108, 106, 106, 0.7); /* White with 70% opacity for translucent effect */
+  background-color: rgba(247, 244, 244, 0.974); /* White with 70% opacity for translucent effect */
   padding: 15px 20px;
   color: rgb(62, 58, 58);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
@@ -67,7 +67,7 @@ section {
 
 .navbar-links li a {
   text-decoration: none;
-  color: white;
+  color: rgb(14, 14, 14);
   font-size: 1.1rem;
   cursor: pointer;
   transition: color 0.3s;
