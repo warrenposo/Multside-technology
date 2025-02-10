@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -7,30 +8,57 @@ import Services from './pages/Services';
 import Reviews from './pages/Reviews';
 import Contact from './pages/Contact';
 import BrandExperience from './pages/BrandExperience'; // Import the new component
+import DoorSecurity from './pages/DoorSecurity'; // Example: Import one service page
+import CCTVInstallation from './pages/CCTVInstallation';
+import FiberInstallation from './pages/FiberInstallation';
+import CarTrackerInstallation from './pages/CarTrackerInstallation';
+import FireDetectionInstallation from './pages/FireDetectionInstallation';
+import VehicleTrackingServices from './pages/VehicleTrackingServices';
+
 import './App.css'; // Import the CSS file
 
 function App() {
   return (
-    <div className="app-container">
-      <Navbar />
-      <div id="home" className="section">
-        <Home />
+    <Router>
+      <div className="app-container">
+        <Navbar />
+        <Routes>
+          {/* Main Page with All Sections */}
+          <Route
+            path="/"
+            element={
+              <>
+                <div id="home" className="section">
+                  <Home />
+                </div>
+                <div id="about" className="section">
+                  <About />
+                </div>
+                <div id="services" className="section">
+                  <Services />
+                  <BrandExperience />
+                </div>
+                <div id="reviews" className="section">
+                  <Reviews />
+                </div>
+                <div id="contact" className="section">
+                  <Contact />
+                </div>
+              </>
+            }
+          />
+
+          {/* Individual Service Pages */}
+          <Route path="/services/door-security" element={<DoorSecurity />} />
+          <Route path="/services/cctv-installation" element={<CCTVInstallation />} />
+          <Route path="/services/fiber-installation" element={<FiberInstallation />} />
+          <Route path="/services/car-tracker-installation" element={<CarTrackerInstallation />} />
+          <Route path="/services/fire-detection-installation" element={<FireDetectionInstallation />} />
+          <Route path="/services/vehicle-tracking-services" element={<VehicleTrackingServices />} />
+        </Routes>
+        <Footer />
       </div>
-      <div id="about" className="section">
-        <About />
-      </div>
-      <div id="services" className="section">
-        <Services />
-        <BrandExperience /> {/* Add the Brand Experience section here */}
-      </div>
-      <div id="reviews" className="section">
-        <Reviews />
-      </div>
-      <div id="contact" className="section">
-        <Contact />
-      </div>
-      <Footer />
-    </div>
+    </Router>
   );
 }
 

@@ -71,6 +71,13 @@
   transition: color 0.3s ease;
 }
 
+/* Remove link underline and inherit text color */
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 /* General Body Styling */
 body {
   margin: 0;
