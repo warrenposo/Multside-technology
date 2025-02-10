@@ -50,7 +50,7 @@ section {
 
 .navbar-logo {
   font-size: 1.5rem;
-  color: white;
+  color: rgb(30, 32, 99);
   margin-left: 20px;
 }
 
@@ -74,7 +74,7 @@ section {
 }
 
 .navbar-links li a:hover {
-  color: #7bf312; /* Change hover color */
+  color: #1a2f72; /* Change hover color */
 }
 
 /* Add some margin to the top of each section so that content isn't hidden by the navbar */

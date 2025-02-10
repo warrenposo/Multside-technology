@@ -5,7 +5,7 @@
   align-items: center;
   background-color: rgba(108, 106, 106, 0.077); /* Translucent background */
   padding: 5px 10px;
-  color: white;
+  color: rgb(21, 28, 96);
   position: fixed;
   width: 100%;
   top: 0;
@@ -32,14 +32,14 @@
 
 .navbar-links a {
   text-decoration: none;
-  color: white;
+  color: rgb(36, 22, 90);
   font-size: 1rem;
   position: relative; /* For hover effect */
   transition: color 0.3s;
 }
 
 .navbar-links a:hover {
-  color: #7bf312; /* Green hover color */
+  color: #151c55; /* Green hover color */
 }
 
 .navbar-links a::after {
@@ -49,7 +49,7 @@
   bottom: -5px;
   height: 2px;
   width: 100%;
-  background: white;
+  background: rgb(23, 20, 86);
   transform: scaleX(0); /* Initially hidden */
   transform-origin: left;
   transition: transform 0.3s ease-in-out;
@@ -107,7 +107,7 @@
 
   /* Hover effect for mobile links */
   .navbar-links a:hover {
-    color: #7bf312;
+    color: #16196a;
   }
 
   /* Hover effect for mobile links */
