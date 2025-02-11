@@ -14,37 +14,37 @@ const Services = () => {
   const services = [
     {
       title: 'Door Security',
-      description: 'Implement advanced door security systems...',
+      description: 'Implement advanced door security systems designed to safeguard homes and businesses with cutting-edge technology, ensuring uncompromised protection and seamless access control for peace of mind.',
       image: doorSecurityPic,
       link: '/services/door-security', // Match with App.js route
     },
     {
       title: 'CCTV Installation',
-      description: 'Expert installation of high-resolution CCTV systems...',
+      description: 'Expert installation of high-resolution CCTV systems for round-the-clock monitoring, enhancing security with real-time surveillance, remote access, and reliable protection for your property and assets.',
       image: cctvPic,
       link: '/services/cctv-installation', // Match with App.js route
     },
     {
       title: 'Fiber Installation',
-      description: 'Specialized fiber optic cable installation...',
+      description: 'Specialized fiber optic cable installation delivering high-speed, reliable internet and network connectivity tailored for modern digital requirements and long-term operational efficiency.',
       image: fiberPic,
       link: '/services/fiber-installation', // Match with App.js route
     },
     {
       title: 'Car Tracker Installation',
-      description: 'Equipping vehicles with state-of-the-art tracking devices...',
+      description: 'Equipping vehicles with state-of-the-art tracking devices to ensure real-time location monitoring, theft prevention, and optimal fleet management for personal and business use.',
       image: carTrackerPic,
       link: '/services/car-tracker-installation', // Match with App.js route
     },
     {
       title: 'Fire Detection Installation',
-      description: 'Install cutting-edge fire detection systems...',
+      description: 'Install cutting-edge fire detection systems designed to provide rapid alerts, minimize risks, and safeguard lives and property from potential fire hazards with unmatched reliability.',
       image: fireDetectionPic,
       link: '/services/fire-detection-installation', // Match with App.js route
     },
     {
       title: 'Vehicle Tracking Services',
-      description: 'Delivering comprehensive vehicle tracking solutions...',
+      description: 'Delivering comprehensive vehicle tracking solutions to monitor, manage, and secure fleets effectively, enabling businesses to optimize performance and reduce operational risks..',
       image: vehicleTrackingPic,
       link: '/services/vehicle-tracking-services', // Match with App.js route
     },
