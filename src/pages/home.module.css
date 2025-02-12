@@ -41,46 +41,33 @@
   text-align: center;
   z-index: 2;
   position: relative;
-  font-size: 40px;
+}
+
+/* Style for text content */
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Gradient Text Effect */
-gradientText {
-  font-size: 3rem;
+.gradientText {
+  font-size: 4.5rem; /* Make heading bigger */
   font-weight: bold;
-  background: linear-gradient(
-    to right,
-    #7953cd 20%,
-    #00faa2 30%,
-    #0190cd 70%,
-    #764ada 80%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
-  background-size: 500% auto;
-  animation: textShine 5s ease-in-out infinite alternate;
+  margin-bottom: 1px;
+  
 }
 
-/* Animation for the gradient */
-@keyframes textShine {
-  0% {
-    background-position: 0%;
-  }
-  100% {
-    background-position: 100%;
-  }
+/* Style for tagline */
+.tagline {
+  font-size: 2rem; /* Make tagline bigger */
+  margin-top: 1px; /* Move tagline closer to heading */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .content {
-    font-size: 20px;
-    padding: 10%;
+  .gradientText {
+    font-size: 3rem;
   }
 
-  .gradientText {
-    font-size: 2rem;
-  }
 }

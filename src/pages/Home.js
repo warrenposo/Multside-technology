@@ -18,7 +18,7 @@ const Home = () => {
       <div className={styles.content}>
         <div className={styles.textContent}>
           <h1 className={styles.gradientText}>MULT-SIDE TECHNOLOGIES</h1>
-          <p>Keeping You Safe and Secure</p>
+          <p className={styles.tagline}>Keeping You Safe and Secure</p>
         </div>
       </div>
     </div>
