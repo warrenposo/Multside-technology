@@ -28,7 +28,7 @@ const CarTracking = () => {
           </div>
           <div className="carTracking-block carTracking-right-block">
             <h2>Why Choose Multside?</h2>
-            <p>Here’s why you should trust us:</p>
+            <p>Here’s why you should trust us</p>
           </div>
         </div>
       </div>
