@@ -4,20 +4,20 @@ import doorSecurityImage from '../Assets/door_system.png';
 
 const DoorSecurity = () => {
   return (
-    <div className="page-container">
-      <div className="content-container">
-        <h1>Door Security</h1>
-        <div className="image-container">
-          <img src={doorSecurityImage} alt="Door Security" className="security-image" />
+    <div className="door-security-container">
+      <div className="door-security-content">
+        <h1 className="door-security-title">Door Security</h1>
+        <div className="door-security-image-container">
+          <img src={doorSecurityImage} alt="Door Security" className="door-security-image" />
         </div>
-        <div className="blocks-container">
-          <div className="block left-block">
+        <div className="door-security-blocks">
+          <div className="door-security-block left-block">
             <h2>Who We Are</h2>
             <p>
               Multside is a leading provider of advanced security solutions, specializing in state-of-the-art door security systems. With years of experience in the industry, we have built a reputation for delivering reliable, innovative, and cost-effective security solutions tailored to meet the unique needs of our clients.
             </p>
           </div>
-          <div className="block middle-block">
+          <div className="door-security-block middle-block">
             <h2>Our Door Security Solutions</h2>
             <p>
               We offer a wide range of door security products and services to cater to residential, commercial, and industrial clients. Our solutions include:
@@ -28,7 +28,7 @@ const DoorSecurity = () => {
               <li><strong>Reinforced Doors:</strong> We provide durable, tamper-proof doors designed to resist break-ins and forced entry.</li>
             </ul>
           </div>
-          <div className="block right-block">
+          <div className="door-security-block right-block">
             <h2>Why Choose Multside?</h2>
             <p>
               Choosing the right security provider is crucial for ensuring the safety of your property. Here’s why Multside is the preferred choice for many customers:

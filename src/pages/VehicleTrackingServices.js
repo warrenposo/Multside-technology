@@ -14,7 +14,7 @@ const VehicleTracking = () => {
           <div className="block left-block">
             <h2>Who We Are</h2>
             <p>
-              At <strong>Multside</strong>, we specialize in cutting-edge vehicle tracking and fleet management solutions that provide real-time monitoring, 
+              At Multside, we specialize in cutting-edge vehicle tracking and fleet management solutions that provide real-time monitoring, 
               enhanced security, and cost-saving fuel management. With years of expertise in GPS tracking technology, we offer businesses and individuals 
               reliable and efficient solutions to optimize vehicle usage and improve overall fleet performance.
             </p>

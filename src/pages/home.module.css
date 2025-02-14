@@ -61,7 +61,7 @@
 /* Style for tagline */
 .tagline {
   font-size: 2rem; /* Make tagline bigger */
-  margin-top: 1px; /* Move tagline closer to heading */
+  margin-top: 0.5px; /* Move tagline closer to heading */
 }
 
 /* Responsive Design */

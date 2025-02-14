@@ -73,7 +73,7 @@ const Contactus = () => {
           <span className={styles.icon}>📧</span>
           <div>
             <h4>Email Us</h4>
-            <p>multsidetechnologies@gmail.com</p>
+            <p>info@multside.co.ke</p>
           </div>
         </div>
         <div className={styles.infoItem}>

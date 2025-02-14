@@ -1,31 +1,71 @@
-/* Ensure the page takes the full viewport height */
-.page-container {
-    display: flex;
-    flex-direction: column; /* Stack navbar, content, and footer */
-    min-height: 100vh; /* Full viewport height */
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #ffffff; /* Optional: Add a background color */
+/* Scoped styles */
+.carTracking-page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  padding: 80px 20px;
+}
+
+.carTracking-content-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.carTracking-title {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.carTracking-image-container {
+  text-align: center;
+}
+
+.carTracking-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.carTracking-blocks-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.carTracking-block {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carTracking-left-block,
+.carTracking-middle-block,
+.carTracking-right-block {
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carTracking-title {
+    font-size: 2rem;
   }
-  
-  /* Center the content vertically and horizontally */
-  .content-container {
-    flex: 1; /* Allow the content to grow and fill available space */
-    display: flex;
-    flex-direction: column; /* Stack heading and paragraph */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
-    text-align: center; /* Optional: Center text */
-    padding: 20px; /* Add some padding around content */
-  }
-  
-  /* Footer (if you add one later) */
-  .footer {
-    background-color: #f1f1f1; /* Light gray background */
-    text-align: center;
-    padding: 10px 0;
-    font-size: 14px;
-    color: #333;
-  }
-  
+}
