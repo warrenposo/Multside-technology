@@ -1,5 +1,5 @@
 import React from 'react';
-import './carTracker.css';
+import './cartracker.css';
 import carTrackerImage from '../Assets/car_tracker.png';
 
 const CarTracking = () => {
