@@ -37,6 +37,8 @@ const DoorSecurity = () => {
               <li><strong>Expertise:</strong> Our team of security professionals has extensive experience in designing and installing advanced security systems.</li>
               <li><strong>Customization:</strong> We understand that every client has different security needs, and we tailor our solutions accordingly.</li>
               <li><strong>Technology-Driven:</strong> We use cutting-edge technology to provide the most effective security solutions available in the market.</li>
+              <li><strong>24/7 Monitoring:</strong> Our security systems provide round-the-clock surveillance to ensure maximum protection.</li>
+              <li><strong>Affordable Pricing:</strong> We offer competitive pricing without compromising on security and quality.</li>
             </ul>
           </div>
         </div>
