@@ -9,6 +9,7 @@ import fiberPic from '../Assets/fibreee-cable.png';
 import carTrackerPic from '../Assets/car_tracker.png';
 import fireDetectionPic from '../Assets/fire_detection.png';
 import vehicleTrackingPic from '../Assets/managementm.png';
+import fuelpic from '../Assets/fuel-monitor.png'
 
 const Services = () => {
   const services = [
@@ -41,6 +42,12 @@ const Services = () => {
       description: 'Install cutting-edge fire detection systems designed to provide rapid alerts, minimize risks, and safeguard lives and property from potential fire hazards with unmatched reliability.',
       image: fireDetectionPic,
       link: '/services/fire-detection-installation',
+    },
+    {
+      title: 'Fuel management',
+      description: 'Implement advanced fuel monitoring systems designed to optimize fuel usage, enhance efficiency, and reduce operational costs. These cutting-edge solutions provide real-time insights into fuel levels, consumption patterns, and potential leaks, ensuring better fleet management and safeguarding your assets with unmatched reliability.',
+      image: fuelpic,
+      link: '/services/Fuel-mangement',
     },
     {
       title: 'Vehicle Tracking Services',

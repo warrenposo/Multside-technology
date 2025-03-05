@@ -14,6 +14,7 @@ import FiberInstallation from './pages/FiberInstallation';
 import CarTrackerInstallation from './pages/CarTrackerInstallation';
 import FireDetectionInstallation from './pages/FireDetectionInstallation';
 import VehicleTrackingServices from './pages/VehicleTrackingServices';
+import Fuel from './pages/Fuel';
 
 import './App.css'; // Import the CSS file
 
@@ -55,6 +56,7 @@ function App() {
           <Route path="/services/car-tracker-installation" element={<CarTrackerInstallation />} />
           <Route path="/services/fire-detection-installation" element={<FireDetectionInstallation />} />
           <Route path="/services/vehicle-tracking-services" element={<VehicleTrackingServices />} />
+          <Route path="/services/fuel" element={<Fuel />} />
         </Routes>
         <Footer />
       </div>
