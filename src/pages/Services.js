@@ -47,7 +47,7 @@ const Services = () => {
       title: 'Fuel management',
       description: 'Implement advanced fuel monitoring systems designed to optimize fuel usage, enhance efficiency, and reduce operational costs. These cutting-edge solutions provide real-time insights into fuel levels, consumption patterns, and potential leaks, ensuring better fleet management and safeguarding your assets with unmatched reliability.',
       image: fuelpic,
-      link: '/services/Fuel-mangement',
+      link: '/services/Fuel',
     },
     {
       title: 'Vehicle Tracking Services',
